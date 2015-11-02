@@ -1,0 +1,11 @@
+<span id="{{targetElementID}}"></span>
+<script type="text/javascript">
+    jQuery(document).ready(function(){
+        Skype.ui({
+            "name": "call",
+            "element": "{{defaultAccount}}",
+            "participants": ["{{targetElementID}}"],
+            "imageSize": {{imageSize}}
+        });
+    });
+</script>

@@ -6,7 +6,9 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'AnEasySkypeButton\\Setup' => $baseDir . '/src/SetupPlugin.class.php',
+    'AnEasySkypeButton\\Admin\\Settings' => $baseDir . '/src/Admin/Settings.php',
+    'AnEasySkypeButton\\Setup' => $baseDir . '/src/Setup.class.php',
+    'AnEasySkypeButton\\Shortcodes' => $baseDir . '/src/Shortcodes.class.php',
     'Mustache_Autoloader' => $vendorDir . '/mustache/mustache/src/Mustache/Autoloader.php',
     'Mustache_Cache' => $vendorDir . '/mustache/mustache/src/Mustache/Cache.php',
     'Mustache_Cache_AbstractCache' => $vendorDir . '/mustache/mustache/src/Mustache/Cache/AbstractCache.php',
