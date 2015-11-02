@@ -19,3 +19,14 @@ require_once('vendor/autoload.php');
 
 // Instance the Setup
 new \AnEasySkypeButton\Setup();
+
+
+if( !function_exists('anEasySkypeButton') ){
+
+// Courtesy function
+    function anEasySkypeButton()
+    {
+        echo AnEasySkypeButton\Shortcodes::renderSkypeButton();
+    }
+
+}

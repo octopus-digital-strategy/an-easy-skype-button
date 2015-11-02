@@ -18,15 +18,15 @@ class Shortcodes
     {
         $settings = new Settings();
 
-        $defaultAccount = $settings->getValue('_aesb_defaultAccount');
+        $defaultAccount = $settings->getValue('defaultAccount');
 
         if(empty( $defaultAccount )){
             return '<!-- This is not here! -->';
         }
 
         $targetElementID = "anEasySkypeButton_" . mt_rand();
-
-        $engine = new RenderEngine('mustache', Setup::getResourceDirectory('', 'templates/mustache') );
+        $templatePath = Setup::getResourceDirectory('', 'templates/mustache');
+        $engine = new RenderEngine('mustache', $templatePath );
 
         $context = array(
             'targetElementID' => $targetElementID,
@@ -34,7 +34,7 @@ class Shortcodes
             'imageSize' => 24,
         );
 
-        return $engine->renderTemplate( 'skype-button', $context );
+        return $engine->renderTemplate( "{$templatePath}/skype-button.mustache", $context );
     }
 
     public static function skypeButtonShortcode($atts)

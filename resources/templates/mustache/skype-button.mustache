@@ -1,11 +1,12 @@
-<span id="{{targetElementID}}"></span>
+<script type="text/javascript" src="http://www.skypeassets.com/i/scom/js/skype-uri.js"></script>
+<div class="skypeButtonWrapper">
+    <div class="skypeButtonElement" id="{{targetElementID}}" style="display: inline-block; height: 24px; width: auto;"></div>
+</div>
 <script type="text/javascript">
-    jQuery(document).ready(function(){
-        Skype.ui({
-            "name": "call",
-            "element": "{{defaultAccount}}",
-            "participants": ["{{targetElementID}}"],
-            "imageSize": {{imageSize}}
-        });
+    Skype.ui({
+        "name": "call",
+        "element": "{{targetElementID}}",
+        "participants": ["{{defaultAccount}}"],
+        "imageSize": {{imageSize}}
     });
 </script>

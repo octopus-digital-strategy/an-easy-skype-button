@@ -25,7 +25,7 @@ class Settings extends SettingsPage
     private function addCustomSettings()
     {
         $atts = array( 'style' => 'min-width: 400px;', 'readonly' => false );
-        $this->registerMetaField( '_aesb_defaultAccount', __( 'Default Account', 'octopus-skype' ), 'text', '', $atts );
+        $this->registerMetaField( 'defaultAccount', __( 'Default Account', 'octopus-skype' ), 'text', '', $atts );
 
         return $this;
     }

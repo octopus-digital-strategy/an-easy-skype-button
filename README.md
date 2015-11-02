@@ -1,6 +1,6 @@
 #An Easy Skype Button
 
-This plugin registers the shortcode **an-easy-skype-button** to be used with WordPress
+This plugin registers the shortcode **easy-skype-button** to be used with WordPress
  
  
 
@@ -13,6 +13,7 @@ This plugin registers the shortcode **an-easy-skype-button** to be used with Wor
 ###Version 0.1
 
 * Tag to 0.1
+* Added the courtesy function anEasySkypeButton to the init file
 * Added the skype-button mustache template
 * Added the SettingsPage class
 * Added the Shortcodes class

@@ -20,8 +20,8 @@ class Setup
     public function registerStylesAndScripts()
     {
         // Load scripts for the front end
-//        add_filter( 'wp_enqueue_scripts', array( __CLASS__, 'enqueueStyles' ) );
-        add_filter( 'wp_enqueue_scripts', array( __CLASS__, 'enqueueScripts' ) );
+        add_filter( 'wp_enqueue_scripts', array( __CLASS__, 'enqueueStyles' ) );
+//        add_filter( 'wp_enqueue_scripts', array( __CLASS__, 'enqueueScripts' ) );
         return $this;
     }
 
@@ -41,14 +41,14 @@ class Setup
     // Static methods
     public static function enqueueStyles()
     {
-        if( is_admin() ){
-            if( $stylePath = self::getResourceURL( 'admin-styles.css', 'css' ) ){
-                wp_enqueue_style( 'your-plugin-name-admin-styles', $stylePath );
-            }
-        }
+//        if( is_admin() ){
+//            if( $stylePath = self::getResourceURL( 'admin-styles.css', 'css' ) ){
+//                wp_enqueue_style( 'your-plugin-name-admin-styles', $stylePath );
+//            }
+//        }
 
-        if( $stylePath = self::getResourceURL( 'front-end.css', 'css' ) ){
-            wp_enqueue_style( 'your-plugin-name-front-end-styles', $stylePath );
+        if( $stylePath = self::getResourceURL( 'octopus-skype.css', 'css' ) ){
+            wp_enqueue_style( 'octopus-skype', $stylePath );
         }
     }
 
