@@ -49,25 +49,32 @@
     },
     {
         "name": "page-carbajal/wpexpress",
-        "version": "dev-master",
-        "version_normalized": "9999999-dev",
+        "version": "0.3.2",
+        "version_normalized": "0.3.2.0",
         "source": {
             "type": "git",
             "url": "https://github.com/Page-Carbajal/WPExpress.git",
-            "reference": "e3ad9cd09a9d8dcdf7ee10dfa519eeba4abb7dca"
+            "reference": "47ff41adf6f48cb0c30c1776c1ddb33091cf9278"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/Page-Carbajal/WPExpress/zipball/47ff41adf6f48cb0c30c1776c1ddb33091cf9278",
+            "reference": "47ff41adf6f48cb0c30c1776c1ddb33091cf9278",
+            "shasum": ""
         },
         "require": {
             "mustache/mustache": "^2.9",
             "php": ">=5.3"
         },
-        "time": "2015-10-30 18:30:36",
-        "type": "lybrary",
-        "installation-source": "source",
+        "time": "2015-11-03 16:23:24",
+        "type": "library",
+        "installation-source": "dist",
         "autoload": {
             "psr-4": {
                 "WPExpress\\": "source/"
             }
         },
+        "notification-url": "https://packagist.org/downloads/",
         "license": [
             "GNU-3.0"
         ],

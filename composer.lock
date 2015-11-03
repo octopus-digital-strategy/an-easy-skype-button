@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "d3554f1fff17f9c8f9d640de1008bd3b",
-    "content-hash": "e979355c628bc94ee55ca8e67e98c19b",
+    "hash": "a497c478b795ee0a2a3f583199eee085",
+    "content-hash": "575464bb9954768ce24bd735721013a9",
     "packages": [
         {
             "name": "mustache/mustache",
@@ -55,22 +55,29 @@
         },
         {
             "name": "page-carbajal/wpexpress",
-            "version": "dev-master",
+            "version": "0.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Page-Carbajal/WPExpress.git",
-                "reference": "e3ad9cd09a9d8dcdf7ee10dfa519eeba4abb7dca"
+                "reference": "47ff41adf6f48cb0c30c1776c1ddb33091cf9278"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Page-Carbajal/WPExpress/zipball/47ff41adf6f48cb0c30c1776c1ddb33091cf9278",
+                "reference": "47ff41adf6f48cb0c30c1776c1ddb33091cf9278",
+                "shasum": ""
             },
             "require": {
                 "mustache/mustache": "^2.9",
                 "php": ">=5.3"
             },
-            "type": "lybrary",
+            "type": "library",
             "autoload": {
                 "psr-4": {
                     "WPExpress\\": "source/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "GNU-3.0"
             ],
@@ -81,15 +88,13 @@
                 }
             ],
             "homepage": "https://github.com/Page-Carbajal/WPExpress",
-            "time": "2015-10-30 18:30:36"
+            "time": "2015-11-03 16:23:24"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "page-carbajal/wpexpress": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
