@@ -10,6 +10,11 @@ This plugin registers the shortcode **easy-skype-button** to be used with WordPr
 * Settings Page to specify default account
 
 
+###Version 0.2
+
+* Tag for release
+* Added WPExpress files to the local repository
+
 ###Version 0.1
 
 * Tag to 0.1
