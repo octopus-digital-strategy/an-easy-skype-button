@@ -62,7 +62,7 @@ Both options will generate the same result a clickable skype button
 
 ###Version 0.3.0
 
-- Upgrade to WP
+- Upgrade to WPExpress 1.2.0
 
 
 ###Version 0.2.1

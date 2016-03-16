@@ -3,8 +3,8 @@
  * Plugin name: An Easy Skype Button
  * Plugin URI: https://github.com/octopus-digital-strategy/an-easy-skype-button
  * Description: A really simple plugin to create a Skype button with a short code.
- * Version: 0.2.1
- * Author: Page-Carbajal
+ * Version: 0.3.0
+ * Author: A Software Engineer
  * Author URI: http://pagecarbajal.com
  * Tags: bare-bones-plugin, wp-express
  */

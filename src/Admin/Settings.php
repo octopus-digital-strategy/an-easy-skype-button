@@ -3,31 +3,32 @@
 namespace AnEasySkypeButton\Admin;
 
 
-use WPExpress\Abstractions\SettingsPage;
+use WPExpress\Admin\BaseSettingsPage;
 
 
-class Settings extends SettingsPage
+class Settings extends BaseSettingsPage
 {
 
     public function __construct()
     {
-        parent::__construct( __( 'Skype Settings', 'octopus-skype' ), 'manage_options', 'octopus-skype-button' );
-        $description = __( 'Set the default skype account name', 'octopus-skype' );
+        parent::__construct(__('Skype Settings', 'octopus-skype'), 'manage_options', 'octopus-skype-button');
+        $description = __('Set the default skype account name', 'octopus-skype');
+        $this->setPageDescription($description);
 
-
-        $this->addCustomSettings()
-            ->setPageDescription($description)
-            ->setPageTitle( __( 'An Easy Skype Button', 'octopus-skype' ) )
-            ->registerPage();
+        $this->addOptions();
 
     }
 
-    private function addCustomSettings()
+    private function addOptions()
     {
-        $atts = array( 'style' => 'min-width: 400px;', 'readonly' => false );
-        $this->registerMetaField( 'defaultAccount', __( 'Default Account', 'octopus-skype' ), 'text', '', $atts );
+        $defaultAccount = $this->getOptionValue('defaultAccount');
 
-        return $this;
+        $atts = array( 'style' => 'min-width: 400px;', 'readonly' => false );
+
+        $this->fields->addTextInput('defaultAccount')
+            ->addLabel(__('Default Account', 'octopus-skype'))
+            ->setValue($defaultAccount)
+            ->setAttributes($atts);
     }
 
 }
