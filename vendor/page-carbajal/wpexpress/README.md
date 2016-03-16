@@ -1,7 +1,8 @@
-# WPExpress
+# WPExpress - A WordPress Framework for Developers
+
 A light weight framework for WordPress Developers
 
-Built to help you DRY. WPExpress is a package that helps you achieve the most common taks on WordPress
+Built to help you DRY. WPExpress is being developed to expedite the repetitive work, giving you the chance to work in code that matters in your WordPress projects.
 
 ##Quick Start
 
@@ -9,43 +10,175 @@ WPExpress is designed to be easy to use. Start by reading our [documentation](ht
 
 ##Framework Structure
 
-* WPExpress
-    * Query
-    * Abstractions
-        * Model
-            * BaseModel
-            * BaseTaxonomy
-        * Settings Page
-        * Dashboard Widget
-    * Model
-        * Post
-        * Taxonomy
-    * UI
-        * RenderEngine
-        * HTML/ Tags
-            * Textbox
-            * Radio
-            * Checkbox
-            * Select
-            * TextArea
-            * Code
-            * WYSIWYG
-            * GoogleMap
+- Database  [WPExpress/Query](https://github.com/Page-Carbajal/WPExpress-Query)
+	- Query
+	- Post
+	- Taxonomy
+	- MetaField
+	- User **TBD**
+	- UserRole **TBD**
+	- Transient **TBD**
+- Model
+	- BaseModel
+	- BaseTaxonomy
+	- BaseUser **TBD**
+	- BaseUserRole **TBD**
+	- BaseRelation **TBD**
+- Admin
+	- BaseSettingsPage
+	- Metabox **TBD**
+	- Widget **TBD**
+- API **TBD**
+	- BaseAPI
+- UI [WPExpress/UI](https://github.com/Page-Carbajal/WPExpress-UI)
+    - BaseResources
+	- RenderEngine
+	- FieldCollection
+	- HTMLFieldParser
+	- ReactJS **TBD**
+	
+##RoadMap
 
-##Road Map
+###Anouncing Minerva for WPExpress
 
-* Encapsulate common tasks such as getAll, getByField, getPermalink, getThumbailURL, getAttachments
-* Register CPTs and Taxonomies
-* Implement dotEnv for configurations
-* Provides a set of Abstract classes to build 
-    * Custom Post Types / Fields
-    * Custom Taxonomies
-    * DashboardWidgets
-* Implement Twig to improve the template and coding experience // Mustache will still be supported
+To be serious about this framework, I need to build a **Command Line Interface**. **[Minerva](https://github.com/Page-Carbajal/Minerva)** will be such **CLI**
 
+###WPExpress 1.3
+
+The stable release of the Framework with al of its members finished and working 100%
 
 
 ##Changelog
+
+###TODO
+
+- Add icons support for BaseModel
+- BaseSettingsPage/AutoSetValues for Fields
+    - Create the public method  BaseSettingsPage/setFieldValue to use the field key to set the field value
+    - Add apply_filters method to FieldCollection/addNewField to allow setting values with a filter
+
+##Current Track
+
+
+
+###Version 1.2.5 - BaseSettingsPage Beautification
+
+- Changed the methods update_site_option and get_site_option to update_option and get_option
+- Allow empty values on BaseSettings/save
+- Documentation update
+- Removed the property BaseSettingsPage/settingsPageHeading
+- Simplified the BaseSettingsPage constructor
+- Renamed the property BaseSettingsPage/capabilities to BaseSettingsPage/userCapabilities 
+
+
+###Version 1.2.4 - WPExpress/UI 1.0.2
+
+- Re-tagged
+- Upgrade composer dependency to WPExpress/UI version 1.0.2
+- Changed composer to require wpexpress-ui 1.0.1 
+- Fixed errors with HTMLParser and added a toArray method to FieldCollection 
+
+###Version 1.2.3 - WPExpress/UI 1.0.0
+
+- Upgraded to WPExpress/UI 1.0.0
+
+###Version 1.2.2 - Fixed BaseSettingsPage Template Path Error
+
+- Fixed the template path verification error
+
+
+###Version 1.2.1 - BaseModel simplification
+
+- Made the parameter $bean optional on BaseModel class
+
+
+###Version 1.2.0 - Dropped BaseModelInterface
+
+- Added the method getPostType to BaseModel
+- Deleted the BaseModelInterface class in favor of Convention over Configuration
+
+
+###Version 1.1.0
+
+- Simplified the classes Page and Post
+- Added constructor function to make it easier for folks to get started with the project
+- Removed the datatype from function declaration on BaseModel/setPublic
+
+
+###Version 1.0.0
+
+- Made Post class final
+- Made Post class extend BaseModel 
+- Added empty abstract class Admin/MetaBox class
+- Added empty abstract class API/BaseApi 
+- Added empty abstract classes BaseUser and BaseUserRole 
+- Added BaseModel, BaseModelInterface and BaseTaxonomy abstract classes
+- Finished the first iteration on the project structure
+- Removed Abstractions, Model and Interfaces folder from project structure
+
+
+##Version Zero-Six
+
+This version is maintained for compatibility purposes only. 
+
+
+###Version 0.6.1 - Updated Query version
+
+- Updated WPExpress Query version
+
+###Version 0.6.0 - New models
+
+- Implementing BaseTaxonomy
+- Updated WPExpress/Query dependency 
+- Implemented basic methods for BaseTaxonomy
+- Added empty Sample classes Post and Taxonomy
+- Added empty BaseTaxonomy class
+- Added empty BasePostModel class
+
+
+###Version 0.5.4 - Updated WPExpress/UI version
+
+- Updated WPExpress to 0.5.2
+
+###Version 0.5.3 - Fixes SettingsPage Render Error
+
+- Throw exception if template file not found
+- Implemented fail-safe to render dedault settings-page template on error
+- Updated WPExpress/UI to 0.5.1
+- Added vendor directory to .gitignore 
+
+
+###Version 0.5.2
+
+- Applied code styling to BaseModel class
+- Added property BaseModel/menuPosition accessible with magic methods
+- Fixed the default menu position to 20
+
+
+###Version 0.5.1
+
+- Moved to require PHP 5.6 or higher
+- Updated the version of WPExpress UI
+- Removed the vendor folder from the repository
+- Fixed the BaseModel/getSupportedFeatures error
+- Adopted [Semantic Versioning](http://semver.org)
+
+###Version 0.5 - Separation of Packages UI and Query
+
+- Both packages are included through composer
+- Created the package [WPExpress/UI](https://github.com/Page-Carbajal/WPExpress-UI)
+- Created the package [WPExpress/Query](https://github.com/Page-Carbajal/WPExpress-Query)
+
+###Version 0.4 - Twig and RenderEngine enhancements
+
+- Implemented RenderEngine changes to SettingsPage class
+- Modified the constructor for RenderEngine 
+- Added RenderEngine getTemplatePath public method
+- Added RenderEngine createDirectoryStructure private method
+- Finished the renderTwigTemplate method
+- Render Engine can now use Twig or Mustache
+- Required Twig with Composer
+
 
 ###Version 0.3.2 - BaseModel Enhancements
 

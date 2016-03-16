@@ -1,6 +1,6 @@
 {
     "require": {
-        "page-carbajal/wpexpress": "^0.3.2"
+        "page-carbajal/wpexpress": "^1.2"
     },
 
     "autoload":{

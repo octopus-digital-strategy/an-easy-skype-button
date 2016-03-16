@@ -59,6 +59,12 @@ Both options will generate the same result a clickable skype button
 * Use Skype scripts to create the button
 * Settings Page to specify default account
 
+
+###Version 0.3.0
+
+- Upgrade to WP
+
+
 ###Version 0.2.1
 
 * Added assets folder
