@@ -3,3 +3,6 @@ assets
 tags
 trunk
 branches
+vendor/mustache/mustache/test
+vendor/twig/twig/test
+vendor/twig/twig/doc
